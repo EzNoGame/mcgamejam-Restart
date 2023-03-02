@@ -27,7 +27,6 @@ func _ready():
 		"techTreeUnlockable":[true, false, false, false, false, false, false, false, false, false, false]
 	}
 	Save.data = save
-	
 
 func _unhandled_input(event):
 	# Toggle tech tree menu
