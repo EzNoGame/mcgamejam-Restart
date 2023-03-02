@@ -244,7 +244,7 @@ script/source = "extends Control
 
 func _update_preview(mouse_position):
 	if get_child(0):
-		get_child(0).position = mouse_position
+		get_child(0).position = mouse_position - Vector2(16,16)
 	else:
 		if GMManager.machineType != null:
 			var machine = GMManager.MachineList[GMManager.machineType].instance()

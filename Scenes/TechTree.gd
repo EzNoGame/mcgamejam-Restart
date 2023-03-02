@@ -12,7 +12,6 @@ func _ready():
 	unlocked = save.techTreeUnlocked
 	unlockable = save.techTreeUnlockable
 
-
 	for i in unlocked.size():
 		var node = find_node(str(i))
 		if node == null:
