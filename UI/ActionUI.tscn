@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/ActionUISprites/destory machine.png" type="Texture" id=4]
+[ext_resource path="res://UI/ActionUI.gd" type="Script" id=6]
+[ext_resource path="res://UI/ActionUISprites/destory pipe.png" type="Texture" id=7]
+[ext_resource path="res://UI/ActionUISprites/build machine.png" type="Texture" id=8]
+[ext_resource path="res://UI/ActionUISprites/build pipe.png" type="Texture" id=15]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -64.0
+margin_right = 286.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 10
+
+[node name="Build Pipe" type="TextureButton" parent="HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Build Pipe"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 15 )
+expand = true
+
+[node name="Build Machine" type="TextureButton" parent="HBoxContainer"]
+margin_left = 74.0
+margin_right = 138.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Build Machine"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Destroy Pipe" type="TextureButton" parent="HBoxContainer"]
+margin_left = 148.0
+margin_right = 212.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Destroy Pipe"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 7 )
+expand = true
+
+[node name="Destroy Machine" type="TextureButton" parent="HBoxContainer"]
+margin_left = 222.0
+margin_right = 286.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Destroy Machine"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 4 )
+expand = true
+
+[connection signal="pressed" from="HBoxContainer/Build Pipe" to="." method="_on_Build_Pipe_pressed"]
+[connection signal="pressed" from="HBoxContainer/Build Machine" to="." method="_on_Build_Machine_pressed"]
+[connection signal="pressed" from="HBoxContainer/Destroy Pipe" to="." method="_on_Destroy_Pipe_pressed"]
+[connection signal="pressed" from="HBoxContainer/Destroy Machine" to="." method="_on_Destroy_Machine_pressed"]

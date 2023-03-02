@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/machines/Machine.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/machines/CarbonNode.gd" type="Script" id=2]
+[ext_resource path="res://Assets/sprites/node.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/machines/output.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+modulate = Color( 1, 0.72549, 0, 1 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="IconList" type="Node2D" parent="." index="1"]
+
+[node name="Sprite3" parent="IconList" index="0" instance=ExtResource( 4 )]
+position = Vector2( 16, 16 )
+frame = 1
