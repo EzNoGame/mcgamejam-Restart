@@ -1,0 +1,17 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/GameModeManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/machines/OrganFactory.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/machines/HeartPump.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/machines/Dynamo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/machines/BloodFactory.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/machines/StemCellFactory.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/machines/TissueBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/machines/PMM.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/machines/HydrocarbonGenerator.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/machines/HumanFactoryMkII.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/machines/HumanFactoryVer_1.tscn" type="PackedScene" id=11]
+
+[node name="GameManager" type="Node"]
+script = ExtResource( 1 )
+MachineList = [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 10 ) ]

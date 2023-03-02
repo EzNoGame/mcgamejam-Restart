@@ -20,7 +20,6 @@ var has_been_run = {}
 signal check_unlock
 
 export var shift = 0
-export var machines = []
 
 
 func _ready():
@@ -149,7 +148,7 @@ func dfs(pipe,type):
 			dfs(i,type)
 
 func register_to_build():
-	var machine = machines[GMManager.machineType].instance()
+	var machine = GMManager.MachineList[GMManager.machineType].instance()
 	machine.grid_pos = grid.world_to_map(get_global_mouse_position())
 	machine.position = grid.map_to_world(machine.grid_pos)
 

@@ -42,7 +42,7 @@ config/windows_native_icon="res://assets/art/gameicon-export.ico"
 
 Transition="*res://Scenes/cut_scenes/transition.tscn"
 Save="*res://Scenes/Save.gd"
-GMManager="*res://Scenes/GameModeManager.gd"
+GMManager="*res://Scenes/GameManager.tscn"
 
 [display]
 

@@ -243,7 +243,7 @@ shader_param/shift = 10.0
 script/source = "extends Control
 
 func _set_preview(machine_type, mouse_position):
-	var machine = load(\"res://scenes/machines/\" + machine_type + \".tscn\").instance()
+	var machine = GMManager.MachineList[GMManager.machineType].instance()
 	machine.position = mouse_position - Vector2(16,16)
 	machine.name = \"preview\"
 	add_child(machine)
