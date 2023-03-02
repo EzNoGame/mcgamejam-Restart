@@ -37,6 +37,10 @@ func _ready():
 	}
 	Save.data = save
 	Save.save_data()
+	
+
+func _process(delta):
+	pass
 
 
 func _unhandled_input(event):

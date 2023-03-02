@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://UI/ConstructUI.gd" type="Script" id=1]
+[ext_resource path="res://UI/MachineButton.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.4, 0.376471, 0.513726, 1 )
@@ -37,6 +38,7 @@ columns = 3
 margin_right = 50.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 50, 50 )
+script = ExtResource( 2 )
 
 [node name="Button2" type="Button" parent="PopupPanel/GridContainer"]
 margin_left = 54.0
@@ -89,3 +91,5 @@ margin_top = 108.0
 margin_right = 158.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 50, 50 )
+
+[connection signal="pressed" from="PopupPanel/GridContainer/Button" to="PopupPanel/GridContainer/Button" method="_on_Button_pressed"]

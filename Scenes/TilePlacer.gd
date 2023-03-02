@@ -20,6 +20,8 @@ var has_been_run = {}
 signal check_unlock
 
 export var shift = 0
+export var machines = []
+
 
 func _ready():
 	
@@ -108,7 +110,7 @@ func _process(delta):
 func _unhandled_input(event):
 	if event.is_action_released("Cancel") and buildMode != BuildMode.NORMAL:
 		cancel_build_mode()
-	if event.is_action_released("Accept") and buildMode == BuildMode.MACHINEBUILD:
+	if event.is_action_released("Accept") and buildMode == BuildMode.MACHINEBUILD and GMManager.machineType != null:
 		register_to_build()
 
 func handle_object_update():
@@ -147,7 +149,7 @@ func dfs(pipe,type):
 			dfs(i,type)
 
 func register_to_build():
-	var machine = load("res://scenes/machines/" + type + ".tscn").instance()
+	var machine = machines[GMManager.machineType].instance()
 	machine.grid_pos = grid.world_to_map(get_global_mouse_position())
 	machine.position = grid.map_to_world(machine.grid_pos)
 
