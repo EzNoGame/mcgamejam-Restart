@@ -6,6 +6,7 @@ var unlocked
 var unlockable
 
 signal unlocked_item
+signal update_floor
 
 func _ready():
 	# get data from save filet
@@ -30,7 +31,8 @@ func unlock(node):
 		save.techTreeUnlocked = unlocked
 		Save.data = save
 		update_unlocks()
-	print("emitted signal")
+	if id == 2 or id == 5 or id == 8:
+		emit_signal("update_floor")
 	emit_signal("unlocked_item")
 	
 

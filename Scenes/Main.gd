@@ -45,7 +45,8 @@ func toggle_tech_tree():
 		var tTree = techTree.instance()
 		tTree.name = "TechTree"
 		add_child(tTree)
-		print($TechTree.connect("unlocked_item", $MainCamera/UI/ConstructUI, "on_unlock"))
+		$TechTree.connect("unlocked_item", $MainCamera/UI/ConstructUI, "on_unlock")
+		$TechTree.connect("update_floor", self, "on_update_floor")
 	techTreeIsOpen = not techTreeIsOpen
 
 func check_unlock():
@@ -55,3 +56,6 @@ func check_unlock():
 	if save.resources[RESOURCETYPE.MECHANICAL_ENERGY]:
 		unlockable[2] = true
 	save.techTreeUnlockable = unlockable
+
+func on_update_floor():
+	$TilePlacer.level_up_floor()

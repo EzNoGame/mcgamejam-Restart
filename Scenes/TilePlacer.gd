@@ -44,6 +44,19 @@ func _ready():
 func level_up_floor():
 	current_floor_level += 1
 	set_floor_level(current_floor_level)
+	if current_floor_level == 1:
+		var water_node = load("res://scenes/machines/WaterNode.tscn").instance()
+		water_node.position = grid.map_to_world(Vector2(14, 8))
+		water_node.grid_pos = Vector2(14,8)
+		$MachineList.add_child(water_node)
+		root_machines.append(water_node)
+		
+		var carbon_node = load("res://scenes/machines/CarbonNode.tscn").instance()
+		carbon_node.position = grid.map_to_world(Vector2(16, 8))
+		carbon_node.grid_pos = Vector2(16,8)
+		$MachineList.add_child(carbon_node)
+		root_machines.append(carbon_node)
+		
 
 func set_floor_level(lvl):
 	for tile in levels.get_node("Floor" + str(current_floor_level)).get_used_cells():

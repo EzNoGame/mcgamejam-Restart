@@ -13,6 +13,6 @@ func _process(delta):
 func on_unlock():
 	print("unlocked")
 	for button in $GridContainer.get_children():
-		if Save.data["techTreeUnlocked"][button.id]:
+		if Save.data["techTreeUnlocked"][button.id+1]:
 			button.disabled = false
 		
