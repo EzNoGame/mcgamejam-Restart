@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/ConstructUI.gd" type="Script" id=1]
-[ext_resource path="res://UI/MachineButton.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/MachineButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/sprites/ResourceIcons/mechanical_icon.png" type="Texture" id=3]
+[ext_resource path="res://Assets/sprites/ResourceIcons/stemcell_icon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/sprites/ResourceIcons/tissue_icon.png" type="Texture" id=5]
+[ext_resource path="res://Assets/sprites/ResourceIcons/Blood_Icon.png" type="Texture" id=6]
+[ext_resource path="res://Assets/sprites/ResourceIcons/hydrocarbon_icon.png" type="Texture" id=7]
+[ext_resource path="res://Assets/sprites/ResourceIcons/human_icon.png" type="Texture" id=8]
+[ext_resource path="res://Assets/sprites/ResourceIcons/electricity_icon.png" type="Texture" id=9]
 
 [node name="Control" type="Control"]
 anchor_top = 0.602
@@ -20,62 +27,65 @@ margin_bottom = 158.0
 rect_min_size = Vector2( 100, 150 )
 columns = 3
 
-[node name="Button" type="Button" parent="GridContainer"]
-margin_right = 50.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 50, 50 )
-script = ExtResource( 2 )
+[node name="Button" parent="GridContainer" instance=ExtResource( 2 )]
+margin_right = 32.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 3 )
 
-[node name="Button2" type="Button" parent="GridContainer"]
-margin_left = 54.0
+[node name="Button2" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 7 )
+id = 1
+
+[node name="Button3" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 72.0
 margin_right = 104.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 50, 50 )
+margin_bottom = 32.0
+texture_normal = ExtResource( 4 )
+id = 2
 
-[node name="Button3" type="Button" parent="GridContainer"]
-margin_left = 108.0
-margin_right = 158.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 50, 50 )
+[node name="Button4" parent="GridContainer" instance=ExtResource( 2 )]
+margin_top = 36.0
+margin_right = 32.0
+margin_bottom = 67.0
+texture_normal = ExtResource( 9 )
+id = 3
 
-[node name="Button4" type="Button" parent="GridContainer"]
-margin_top = 54.0
-margin_right = 50.0
-margin_bottom = 104.0
-rect_min_size = Vector2( 50, 50 )
+[node name="Button5" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 36.0
+margin_top = 36.0
+margin_right = 68.0
+margin_bottom = 67.0
+texture_normal = ExtResource( 5 )
+id = 4
 
-[node name="Button5" type="Button" parent="GridContainer"]
-margin_left = 54.0
-margin_top = 54.0
+[node name="Button6" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 72.0
+margin_top = 36.0
 margin_right = 104.0
-margin_bottom = 104.0
-rect_min_size = Vector2( 50, 50 )
+margin_bottom = 67.0
+texture_normal = ExtResource( 6 )
+id = 5
 
-[node name="Button6" type="Button" parent="GridContainer"]
-margin_left = 108.0
-margin_top = 54.0
-margin_right = 158.0
-margin_bottom = 104.0
-rect_min_size = Vector2( 50, 50 )
+[node name="Button7" parent="GridContainer" instance=ExtResource( 2 )]
+margin_top = 71.0
+margin_right = 32.0
+margin_bottom = 102.0
+texture_normal = ExtResource( 8 )
+id = 6
 
-[node name="Button7" type="Button" parent="GridContainer"]
-margin_top = 108.0
-margin_right = 50.0
-margin_bottom = 158.0
-rect_min_size = Vector2( 50, 50 )
+[node name="Button8" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 36.0
+margin_top = 71.0
+margin_right = 68.0
+margin_bottom = 102.0
+id = 7
 
-[node name="Button8" type="Button" parent="GridContainer"]
-margin_left = 54.0
-margin_top = 108.0
+[node name="Button9" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 72.0
+margin_top = 71.0
 margin_right = 104.0
-margin_bottom = 158.0
-rect_min_size = Vector2( 50, 50 )
-
-[node name="Button9" type="Button" parent="GridContainer"]
-margin_left = 108.0
-margin_top = 108.0
-margin_right = 158.0
-margin_bottom = 158.0
-rect_min_size = Vector2( 50, 50 )
-
-[connection signal="pressed" from="GridContainer/Button" to="GridContainer/Button" method="_on_Button_pressed"]
+margin_bottom = 102.0
+id = 8
