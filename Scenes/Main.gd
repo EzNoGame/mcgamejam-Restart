@@ -5,16 +5,7 @@ onready var techTree = preload("res://Scenes/TechTree.tscn")
 # using a .save file to save the techTree data and else
 var save = Save.data
 var techTreeIsOpen = false
-var unlocked
-var gameMode
-enum GameMode{
-	NORMAL,
-	PIPE_BUILD,
-	MACHINE_BUILD,
-	PIPE_DESTORY,
-	MACHINE_DESTORY,
-	FREEZE
-}
+var unlockable
 
 func _ready():
 	save = {
@@ -32,16 +23,11 @@ func _ready():
 		RESOURCETYPE.ORGANS: false,
 		RESOURCETYPE.HEART_PUMP: false,
 		},
-		"techTreeUnlocked":[true, false, false, true, false, false, false, false, false, false, false],
-		"techTreeUnlockable":[true, false, false, true, false, false, false, false, false, false, false]
+		"techTreeUnlocked":[true, false, false, false, false, false, false, false, false, false, false],
+		"techTreeUnlockable":[true, false, false, false, false, false, false, false, false, false, false]
 	}
 	Save.data = save
-	Save.save_data()
 	
-
-func _process(delta):
-	pass
-
 
 func _unhandled_input(event):
 	# Toggle tech tree menu
@@ -53,30 +39,21 @@ func toggle_tech_tree():
 	
 	# if open, then close techTree
 	if techTreeIsOpen:
-		Save.save_data()
 		get_node("TechTree").queue_free()
 	else:
-		Save.save_data()
+		check_unlock()
+		Save.data = save
 		var tTree = techTree.instance()
 		tTree.name = "TechTree"
 		add_child(tTree)
 	techTreeIsOpen = not techTreeIsOpen
 
 func check_unlock():
-	# check each tech is open or not
-	# REFACTOR: can use a json/save file to keep track
-	unlocked = save.techTreeUnlocked
+	unlockable = save.techTreeUnlockable
 	if save.resources[RESOURCETYPE.METAL]:
-		unlocked[1] = true
-		unlocked[5] = true
-	if save.resources[RESOURCETYPE.HYDROCARBON]:
-		unlocked[4] = true
-		unlocked[6] = true
-		$BackgroundSounds.insanity_stage = 2
-	if save.resources[RESOURCETYPE.STEM_CELL]:
-		unlocked[7] = true
-		unlocked[8] = true
-		$BackgroundSounds.insanity_stage = 3
-	if save.resources[RESOURCETYPE.BLOOD]:
-		unlocked[9] = true
-		$BackgroundSounds.insanity_stage = 4
+		unlockable[1] = true
+		unlockable[5] = true
+	if save.resources[RESOURCETYPE.MECHANICAL_ENERGY]:
+		unlockable[4] = true
+		unlockable[6] = true
+	save.techTreeUnlockable = unlockable
