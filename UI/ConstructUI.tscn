@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://UI/ConstructUI.gd" type="Script" id=1]
 [ext_resource path="res://UI/MachineButton.gd" type="Script" id=2]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.4, 0.376471, 0.513726, 1 )
 
 [node name="Control" type="Control"]
 anchor_top = 0.602
@@ -17,79 +14,68 @@ margin_bottom = -129.8
 mouse_filter = 2
 script = ExtResource( 1 )
 
-[node name="PopupPanel" type="PopupPanel" parent="."]
-visible = true
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 56.0
-margin_bottom = 28.0
-rect_min_size = Vector2( 100, 150 )
-mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
-
-[node name="GridContainer" type="GridContainer" parent="PopupPanel"]
+[node name="GridContainer" type="GridContainer" parent="."]
 margin_right = 158.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 100, 150 )
-mouse_filter = 2
 columns = 3
 
-[node name="Button" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button" type="Button" parent="GridContainer"]
 margin_right = 50.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 50, 50 )
 script = ExtResource( 2 )
 
-[node name="Button2" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button2" type="Button" parent="GridContainer"]
 margin_left = 54.0
 margin_right = 104.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Button3" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button3" type="Button" parent="GridContainer"]
 margin_left = 108.0
 margin_right = 158.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Button4" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button4" type="Button" parent="GridContainer"]
 margin_top = 54.0
 margin_right = 50.0
 margin_bottom = 104.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Button5" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button5" type="Button" parent="GridContainer"]
 margin_left = 54.0
 margin_top = 54.0
 margin_right = 104.0
 margin_bottom = 104.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Button6" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button6" type="Button" parent="GridContainer"]
 margin_left = 108.0
 margin_top = 54.0
 margin_right = 158.0
 margin_bottom = 104.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Button7" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button7" type="Button" parent="GridContainer"]
 margin_top = 108.0
 margin_right = 50.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Button8" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button8" type="Button" parent="GridContainer"]
 margin_left = 54.0
 margin_top = 108.0
 margin_right = 104.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Button9" type="Button" parent="PopupPanel/GridContainer"]
+[node name="Button9" type="Button" parent="GridContainer"]
 margin_left = 108.0
 margin_top = 108.0
 margin_right = 158.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 50, 50 )
 
-[connection signal="pressed" from="PopupPanel/GridContainer/Button" to="PopupPanel/GridContainer/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="GridContainer/Button" to="GridContainer/Button" method="_on_Button_pressed"]
