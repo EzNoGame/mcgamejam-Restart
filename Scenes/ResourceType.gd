@@ -13,4 +13,5 @@ enum {
 	HUMAN
 	ORGANS,
 	HEART_PUMP,
+	HUMAN_2,
 }

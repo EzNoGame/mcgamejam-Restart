@@ -22,6 +22,7 @@ func _ready():
 		RESOURCETYPE.HUMAN: false,
 		RESOURCETYPE.ORGANS: false,
 		RESOURCETYPE.HEART_PUMP: false,
+		RESOURCETYPE.HUMAN_2:false,
 		},
 		"techTreeUnlocked":[true, false, false, false, false, false, false, false, false, false, false],
 		"techTreeUnlockable":[true, false, false, false, false, false, false, false, false, false, false]
@@ -55,6 +56,19 @@ func check_unlock():
 		unlockable[1] = true
 	if save.resources[RESOURCETYPE.MECHANICAL_ENERGY]:
 		unlockable[2] = true
+	if save.resources[RESOURCETYPE.HYDROCARBON]:
+		unlockable[3] = true
+		unlockable[4] = true
+	if save.resources[RESOURCETYPE.ELECTRICAL_ENERGY] and save.resources[RESOURCETYPE.STEM_CELL]:
+		unlockable[5] = true
+		unlockable[6] = true
+	if save.resources[RESOURCETYPE.TISSUE] and save.resources[RESOURCETYPE.BLOOD]:
+		unlockable[7] = true
+	if save.resources[RESOURCETYPE.HUMAN]:
+		unlockable[8] = true
+		unlockable[9] = true
+	if save.resources[RESOURCETYPE.ORGANS] and save.resources[RESOURCETYPE.HEART_PUMP]:
+		unlockable[10] = true
 	save.techTreeUnlockable = unlockable
 
 func on_update_floor():

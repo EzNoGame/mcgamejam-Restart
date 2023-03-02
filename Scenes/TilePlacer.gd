@@ -46,14 +46,14 @@ func level_up_floor():
 	set_floor_level(current_floor_level)
 	if current_floor_level == 1:
 		var water_node = load("res://scenes/machines/WaterNode.tscn").instance()
-		water_node.position = grid.map_to_world(Vector2(14, 8))
-		water_node.grid_pos = Vector2(14,8)
+		water_node.position = grid.map_to_world(Vector2(16, 8))
+		water_node.grid_pos = Vector2(16,8)
 		$MachineList.add_child(water_node)
 		root_machines.append(water_node)
 		
 		var carbon_node = load("res://scenes/machines/CarbonNode.tscn").instance()
-		carbon_node.position = grid.map_to_world(Vector2(16, 8))
-		carbon_node.grid_pos = Vector2(16,8)
+		carbon_node.position = grid.map_to_world(Vector2(15, 7))
+		carbon_node.grid_pos = Vector2(15,7)
 		$MachineList.add_child(carbon_node)
 		root_machines.append(carbon_node)
 		

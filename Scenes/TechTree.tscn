@@ -209,7 +209,7 @@ margin_bottom = 323.0
 rect_min_size = Vector2( 100, 100 )
 
 [node name="7" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 6/Human"]
-modulate = Color( 0.392157, 0.392157, 0.392157, 0.537255 )
+modulate = Color( 1, 1, 1, 0.392157 )
 margin_right = 100.0
 margin_bottom = 100.0
 hint_tooltip = "Human. To unlock this tech, complete the previous techs."
@@ -279,7 +279,7 @@ margin_bottom = 323.0
 rect_min_size = Vector2( 100, 100 )
 
 [node name="10" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 7/Human"]
-modulate = Color( 0.392157, 0.392157, 0.392157, 0.537255 )
+modulate = Color( 1, 1, 1, 0.392157 )
 margin_right = 100.0
 margin_bottom = 100.0
 hint_tooltip = "Human. To unlock this tech, complete the previous techs."
