@@ -74,7 +74,7 @@ script = ExtResource( 1 )
 [node name="UI" parent="MainCamera/UI" instance=ExtResource( 6 )]
 mouse_filter = 2
 
-[node name="Popup" parent="MainCamera/UI" instance=ExtResource( 8 )]
+[node name="ConstructUI" parent="MainCamera/UI" instance=ExtResource( 8 )]
 anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0

@@ -5,6 +5,8 @@ var save
 var unlocked
 var unlockable
 
+signal unlocked_item
+
 func _ready():
 	# get data from save filet
 	save = Save.data
@@ -28,6 +30,9 @@ func unlock(node):
 		save.techTreeUnlocked = unlocked
 		Save.data = save
 		update_unlocks()
+	print("emitted signal")
+	emit_signal("unlocked_item")
+	
 
 func update_unlocks():
 		

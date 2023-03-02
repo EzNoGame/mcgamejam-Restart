@@ -9,3 +9,10 @@ func _process(delta):
 		visible = true
 	else:
 		visible = false
+
+func on_unlock():
+	print("unlocked")
+	for button in $GridContainer.get_children():
+		if Save.data["techTreeUnlocked"][button.id]:
+			button.disabled = false
+		

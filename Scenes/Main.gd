@@ -45,6 +45,7 @@ func toggle_tech_tree():
 		var tTree = techTree.instance()
 		tTree.name = "TechTree"
 		add_child(tTree)
+		print($TechTree.connect("unlocked_item", $MainCamera/UI/ConstructUI, "on_unlock"))
 	techTreeIsOpen = not techTreeIsOpen
 
 func check_unlock():
