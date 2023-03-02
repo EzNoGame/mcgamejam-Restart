@@ -277,7 +277,6 @@ z_index = 1
 tile_set = SubResource( 3 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -5, 0, 0 )
 
 [node name="MachineList" type="Node2D" parent="."]
 use_parent_material = true
