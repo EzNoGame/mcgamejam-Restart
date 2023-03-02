@@ -37,6 +37,18 @@ func _ready():
 	metal_node.grid_pos = Vector2(15,9)
 	$MachineList.add_child(metal_node)
 	root_machines.append(metal_node)
+	
+	levels = floor_levels.instance()
+	set_floor_level(0)
+
+func level_up_floor():
+	current_floor_level += 1
+	set_floor_level(current_floor_level)
+
+func set_floor_level(lvl):
+	for tile in levels.get_node("Floor" + str(current_floor_level)).get_used_cells():
+		$Floor.set_cell(tile.x, tile.y, 0)
+		
 
 func _process(delta):
 	
@@ -154,6 +166,8 @@ func register_to_build():
 	var occupied = machine.get_world_tiles()
 
 	for tile in occupied:
+		if not (tile in $Floor.get_used_cells()):
+			return
 		for temp in $MachineList.get_children():
 			if tile in temp.get_world_tiles():
 				return
