@@ -6,12 +6,11 @@ var unlocked
 var unlockable
 
 func _ready():
-	# get data from save file
-	Save.load_data()
+	# get data from save filet
 	save = Save.data
 	unlocked = save.techTreeUnlocked
 	unlockable = save.techTreeUnlockable
-
+	
 	for i in unlocked.size():
 		var node = find_node(str(i))
 		if node == null:
@@ -28,7 +27,6 @@ func unlock(node):
 		unlocked[id] = true
 		save.techTreeUnlocked = unlocked
 		Save.data = save
-		Save.save_data()
 		update_unlocks()
 
 func update_unlocks():

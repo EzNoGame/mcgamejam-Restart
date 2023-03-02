@@ -6,7 +6,7 @@ var time_since_last_sound = 0.0
 var length_of_last_sound = 0.0 
 var buffer_between_sounds = 0.0
 var time_since_last_highlight = 0.0
-var insanity_stage = 1
+var insanity_stage : int = 1
 var pick = 0
 
 func _ready():

@@ -1,7 +1,6 @@
 extends Control
 
 func _ready():
-	Save.load_data()
 	var unlocked
 #	$HBoxContainer/Back.hide()
 	

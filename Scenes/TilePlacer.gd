@@ -150,6 +150,10 @@ func dfs(pipe,type):
 					machine.functioning = true
 					if machine.get_node("AnimationPlayer"):
 						machine.get_node("AnimationPlayer").play("Functioning")
+						var data = Save.data
+						if not data.resources[machine.output_type]:
+							data.resources[machine.output_type] = true
+							Save.data = data
 					if $PipeSystem.get_pipe(machine.get_world_output()) != null:
 						dfs($PipeSystem.get_pipe(machine.get_world_output()), machine.output_type)
 	if len(pipe.children) == 0:
