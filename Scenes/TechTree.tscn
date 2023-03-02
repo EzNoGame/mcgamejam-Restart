@@ -27,65 +27,10 @@ margin_top = 25.0
 margin_right = 974.0
 margin_bottom = 572.0
 
-[node name="Line2D" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 70, 270, 180, 270 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D2" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 260, 270, 350, 190 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D3" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 260, 270, 350, 350 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D4" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 400, 190, 510, 190 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D5" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 400, 350, 510, 350 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D6" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 600, 350, 690, 335 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D7" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 600, 350, 690, 480 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D8" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 770, 483, 858, 279 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D9" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 772, 334, 858, 279 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D10" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 772, 334, 858, 279 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
-[node name="Line2D11" type="Line2D" parent="MarginContainer"]
-points = PoolVector2Array( 605, 192, 858, 279 )
-width = 5.0
-default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
-
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-margin_right = 950.0
+margin_right = 935.0
 margin_bottom = 547.0
-custom_constants/separation = 70
+custom_constants/separation = 30
 
 [node name="Tier 1" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 margin_right = 100.0
@@ -112,8 +57,8 @@ __meta__ = {
 tooltip_desc = "Metal from the white hole. A basic material."
 
 [node name="Tier 2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 170.0
-margin_right = 270.0
+margin_left = 130.0
+margin_right = 230.0
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
@@ -124,7 +69,7 @@ margin_right = 100.0
 margin_bottom = 323.0
 rect_min_size = Vector2( 100, 100 )
 
-[node name="3" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 2/PMM"]
+[node name="1" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 2/PMM"]
 margin_right = 100.0
 margin_bottom = 100.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
@@ -139,8 +84,8 @@ Requires: Metal
 Spins forever!"
 
 [node name="Tier 3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 340.0
-margin_right = 440.0
+margin_left = 260.0
+margin_right = 360.0
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
@@ -151,7 +96,7 @@ margin_right = 100.0
 margin_bottom = 248.0
 rect_min_size = Vector2( 100, 100 )
 
-[node name="1" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 3/RE"]
+[node name="2" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 3/RE"]
 margin_right = 100.0
 margin_bottom = 100.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
@@ -171,7 +116,7 @@ margin_right = 100.0
 margin_bottom = 398.0
 rect_min_size = Vector2( 100, 100 )
 
-[node name="5" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 3/HCG"]
+[node name="3" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 3/HCG"]
 margin_right = 100.0
 margin_bottom = 100.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
@@ -184,8 +129,8 @@ tooltip_desc = "Hydrocarbon Generator (Hydrocarbons)
 Requires: Water, Carbon"
 
 [node name="Tier 4" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 510.0
-margin_right = 610.0
+margin_left = 390.0
+margin_right = 490.0
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
@@ -214,7 +159,7 @@ margin_right = 100.0
 margin_bottom = 398.0
 rect_min_size = Vector2( 100, 100 )
 
-[node name="6" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 4/SC"]
+[node name="5" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 4/SC"]
 margin_right = 100.0
 margin_bottom = 100.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
@@ -226,9 +171,34 @@ script = ExtResource( 4 )
 tooltip_desc = "Stem Cell Generator (Stem Cells)
 Requires: Hydrocarbons"
 
+[node name="Tier 6" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 520.0
+margin_right = 620.0
+margin_bottom = 547.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Human" type="TextureRect" parent="MarginContainer/HBoxContainer/Tier 6"]
+margin_top = 223.0
+margin_right = 100.0
+margin_bottom = 323.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="6" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 6/Human"]
+modulate = Color( 0.392157, 0.392157, 0.392157, 0.537255 )
+margin_right = 100.0
+margin_bottom = 100.0
+hint_tooltip = "Human. To unlock this tech, complete the previous techs."
+texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 10 )
+expand = true
+script = ExtResource( 4 )
+tooltip_desc = "Human
+Requires: Blood, Tissue, Electricity"
+
 [node name="Tier 5" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 680.0
-margin_right = 780.0
+margin_left = 650.0
+margin_right = 750.0
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 2
@@ -239,9 +209,10 @@ margin_right = 100.0
 margin_bottom = 397.0
 rect_min_size = Vector2( 100, 100 )
 
-[node name="8" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 5/T"]
+[node name="7" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 5/T"]
+margin_top = -149.0
 margin_right = 100.0
-margin_bottom = 100.0
+margin_bottom = -49.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
 disabled = true
 texture_normal = ExtResource( 8 )
@@ -257,9 +228,10 @@ margin_right = 100.0
 margin_bottom = 547.0
 rect_min_size = Vector2( 100, 100 )
 
-[node name="7" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 5/B"]
+[node name="8" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 5/B"]
+margin_top = -149.0
 margin_right = 100.0
-margin_bottom = 100.0
+margin_bottom = -49.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
 disabled = true
 texture_normal = ExtResource( 1 )
@@ -269,20 +241,20 @@ script = ExtResource( 4 )
 tooltip_desc = "Blood Stone (Blood)
 Requires: Carbon, Water"
 
-[node name="Tier 6" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 850.0
-margin_right = 950.0
+[node name="Tier 7" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 780.0
+margin_right = 880.0
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
 
-[node name="Human" type="TextureRect" parent="MarginContainer/HBoxContainer/Tier 6"]
+[node name="Human" type="TextureRect" parent="MarginContainer/HBoxContainer/Tier 7"]
 margin_top = 223.0
 margin_right = 100.0
 margin_bottom = 323.0
 rect_min_size = Vector2( 100, 100 )
 
-[node name="9" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 6/Human"]
+[node name="9" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 7/Human"]
 modulate = Color( 0.392157, 0.392157, 0.392157, 0.537255 )
 margin_right = 100.0
 margin_bottom = 100.0
@@ -293,3 +265,64 @@ expand = true
 script = ExtResource( 4 )
 tooltip_desc = "Human
 Requires: Blood, Tissue, Electricity"
+
+[node name="Line2D10" type="Line2D" parent="."]
+position = Vector2( 39, 8.40231 )
+scale = Vector2( 1, 1.04598 )
+points = PoolVector2Array( 636, 278.78, 636, 355.264, 650, 355.264 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D9" type="Line2D" parent="."]
+points = PoolVector2Array( 789, 230, 805, 229, 806, 375, 790, 375 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D8" type="Line2D" parent="."]
+points = PoolVector2Array( 658, 298, 675, 298, 675, 227, 689, 227 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2( 49.9524, 25 )
+scale = Vector2( 0.904762, 1 )
+points = PoolVector2Array( 243.211, 271, 329.421, 271, 329.421, 249 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2( 49.9524, 25 )
+scale = Vector2( 0.904762, 1 )
+points = PoolVector2Array( 99, 273, 131, 273 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 348, 296, 348, 322 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D4" type="Line2D" parent="."]
+points = PoolVector2Array( 399, 220, 429, 220 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D5" type="Line2D" parent="."]
+points = PoolVector2Array( 399, 373, 428, 373 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D6" type="Line2D" parent="."]
+points = PoolVector2Array( 479, 273, 479, 298.126, 479, 323 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D7" type="Line2D" parent="."]
+points = PoolVector2Array( 482, 297, 558, 297 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
+
+[node name="Line2D11" type="Line2D" parent="."]
+points = PoolVector2Array( 808, 298, 820, 298 )
+width = 5.0
+default_color = Color( 0.376471, 0.215686, 0.423529, 1 )
