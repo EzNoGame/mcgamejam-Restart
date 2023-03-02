@@ -53,6 +53,13 @@ func check_unlock():
 		unlockable[1] = true
 		unlockable[5] = true
 	if save.resources[RESOURCETYPE.MECHANICAL_ENERGY]:
+<<<<<<< Updated upstream
 		unlockable[4] = true
 		unlockable[6] = true
+=======
+		unlockable[2] = true
+		unlockable[3] = true
+	if save.resources[RESOURCETYPE.HYDROCARBON]:
+		pass
+>>>>>>> Stashed changes
 	save.techTreeUnlockable = unlockable

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/sprites/ResourceIcons/Blood_Icon.png" type="Texture" id=1]
 [ext_resource path="res://Assets/sprites/ResourceIcons/electricity_icon.png" type="Texture" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Assets/sprites/ResourceIcons/hydrocarbon_icon.png" type="Texture" id=6]
 [ext_resource path="res://Assets/sprites/ResourceIcons/stemcell_icon.png" type="Texture" id=7]
 [ext_resource path="res://Assets/sprites/ResourceIcons/tissue_icon.png" type="Texture" id=8]
-[ext_resource path="res://Assets/sprites/ResourceIcons/hydrocarbont.png" type="Texture" id=9]
 [ext_resource path="res://Assets/sprites/ResourceIcons/human_icon.png" type="Texture" id=10]
 [ext_resource path="res://Assets/sprites/ResourceIcons/Metal_.png" type="Texture" id=11]
 [ext_resource path="res://Assets/sprites/ResourceIcons/Question_Mark.png" type="Texture" id=12]
@@ -83,9 +82,15 @@ width = 5.0
 default_color = Color( 0.207843, 0.152941, 0.286275, 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+<<<<<<< Updated upstream
 margin_right = 950.0
 margin_bottom = 547.0
 custom_constants/separation = 70
+=======
+margin_right = 940.0
+margin_bottom = 547.0
+custom_constants/separation = 20
+>>>>>>> Stashed changes
 
 [node name="Tier 1" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 margin_right = 100.0
@@ -112,8 +117,13 @@ __meta__ = {
 tooltip_desc = "Metal from the white hole. A basic material."
 
 [node name="Tier 2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+<<<<<<< Updated upstream
 margin_left = 170.0
 margin_right = 270.0
+=======
+margin_left = 120.0
+margin_right = 220.0
+>>>>>>> Stashed changes
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
@@ -139,12 +149,18 @@ Requires: Metal
 Spins forever!"
 
 [node name="Tier 3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+<<<<<<< Updated upstream
 margin_left = 340.0
 margin_right = 440.0
+=======
+margin_left = 240.0
+margin_right = 340.0
+>>>>>>> Stashed changes
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
 
+<<<<<<< Updated upstream
 [node name="RE" type="TextureRect" parent="MarginContainer/HBoxContainer/Tier 3"]
 margin_top = 148.0
 margin_right = 100.0
@@ -165,10 +181,12 @@ Requires: Nothing
 
 A way to extract different resources from the white hole."
 
+=======
+>>>>>>> Stashed changes
 [node name="HCG" type="TextureRect" parent="MarginContainer/HBoxContainer/Tier 3"]
-margin_top = 298.0
+margin_top = 223.0
 margin_right = 100.0
-margin_bottom = 398.0
+margin_bottom = 323.0
 rect_min_size = Vector2( 100, 100 )
 
 [node name="5" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 3/HCG"]
@@ -184,8 +202,13 @@ tooltip_desc = "Hydrocarbon Generator (Hydrocarbons)
 Requires: Water, Carbon"
 
 [node name="Tier 4" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+<<<<<<< Updated upstream
 margin_left = 510.0
 margin_right = 610.0
+=======
+margin_left = 360.0
+margin_right = 460.0
+>>>>>>> Stashed changes
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
@@ -227,8 +250,13 @@ tooltip_desc = "Stem Cell Generator (Stem Cells)
 Requires: Hydrocarbons"
 
 [node name="Tier 5" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+<<<<<<< Updated upstream
 margin_left = 680.0
 margin_right = 780.0
+=======
+margin_left = 480.0
+margin_right = 580.0
+>>>>>>> Stashed changes
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 2
@@ -270,8 +298,60 @@ tooltip_desc = "Blood Stone (Blood)
 Requires: Carbon, Water"
 
 [node name="Tier 6" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+<<<<<<< Updated upstream
 margin_left = 850.0
 margin_right = 950.0
+=======
+margin_left = 600.0
+margin_right = 700.0
+margin_bottom = 547.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Human" type="TextureRect" parent="MarginContainer/HBoxContainer/Tier 6"]
+margin_top = 223.0
+margin_right = 100.0
+margin_bottom = 323.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="6" type="TextureButton" parent="MarginContainer/HBoxContainer/Tier 6/Human"]
+modulate = Color( 0.392157, 0.392157, 0.392157, 0.537255 )
+margin_right = 100.0
+margin_bottom = 100.0
+hint_tooltip = "Human. To unlock this tech, complete the previous techs."
+texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 10 )
+expand = true
+script = ExtResource( 4 )
+tooltip_desc = "Human
+Requires: Blood, Tissue, Electricity"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 720.0
+margin_right = 820.0
+margin_bottom = 547.0
+
+[node name="Human" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="9" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/Human"]
+modulate = Color( 0.392157, 0.392157, 0.392157, 0.537255 )
+margin_right = 100.0
+margin_bottom = 100.0
+hint_tooltip = "Human. To unlock this tech, complete the previous techs."
+texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 10 )
+expand = true
+script = ExtResource( 4 )
+tooltip_desc = "Human
+Requires: Blood, Tissue, Electricity"
+
+[node name="Tier 7" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 840.0
+margin_right = 940.0
+>>>>>>> Stashed changes
 margin_bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
