@@ -10,7 +10,7 @@ var unlockable
 func _ready():
 	save = {
 		"resources":{
-		RESOURCETYPE.METAL: false,
+		RESOURCETYPE.METAL: true,
 		RESOURCETYPE.CARBON: false,
 		RESOURCETYPE.WATER: false,
 		RESOURCETYPE.MECHANICAL_ENERGY: false,
@@ -51,8 +51,7 @@ func check_unlock():
 	unlockable = save.techTreeUnlockable
 	if save.resources[RESOURCETYPE.METAL]:
 		unlockable[1] = true
-		unlockable[5] = true
 	if save.resources[RESOURCETYPE.MECHANICAL_ENERGY]:
-		unlockable[4] = true
-		unlockable[6] = true
+		unlockable[2] = true
+		unlockable[3] = true
 	save.techTreeUnlockable = unlockable
