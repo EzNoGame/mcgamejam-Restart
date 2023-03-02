@@ -8,6 +8,5 @@ func _process(delta):
 	if buildMode == BuildMode.MACHINEBUILD:
 		var rect = Rect2(rect_position, $PopupPanel.rect_min_size)
 		$PopupPanel.popup(rect)
-		print(rect)
 	else:
 		$PopupPanel.visible = false
