@@ -58,8 +58,7 @@ func _process(delta):
 	
 	match(buildMode):
 		BuildMode.MACHINEBUILD:
-			pass
-			#$HUD._update_preview(grid.map_to_world(grid.world_to_map(get_global_mouse_position())) + Vector2(16, 16))
+			$HUD._update_preview(grid.map_to_world(grid.world_to_map(get_global_mouse_position())) + Vector2(16, 16))
 		
 		BuildMode.PIPEBUILD:
 			if Input.is_action_just_pressed("Accept"):
@@ -171,3 +170,4 @@ func cancel_build_mode():
 		$HUD.get_child(0).queue_free()
 	buildMode = BuildMode.NORMAL
 	GMManager.buildMode = buildMode
+	GMManager.reset_machine()

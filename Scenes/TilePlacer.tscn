@@ -242,14 +242,13 @@ shader_param/shift = 10.0
 [sub_resource type="GDScript" id=6]
 script/source = "extends Control
 
-func _set_preview(machine_type, mouse_position):
-	var machine = GMManager.MachineList[GMManager.machineType].instance()
-	machine.position = mouse_position - Vector2(16,16)
-	machine.name = \"preview\"
-	add_child(machine)
-
 func _update_preview(mouse_position):
-	get_child(0).position = mouse_position - Vector2(16,16)
+	if get_child(0):
+		get_child(0).position = mouse_position
+	else:
+		if GMManager.machineType != null:
+			var machine = GMManager.MachineList[GMManager.machineType].instance()
+			add_child(machine)
 "
 
 [sub_resource type="TileSet" id=4]
