@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heartpump_animation.png-26173ac4f3e239fee1bc5f9d60f3e86c.stex"
+path="res://.import/new_human_with_heartpump.png-49de93704d35369adc8f0eeafad97f64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/heartpump_animation.png"
-dest_files=[ "res://.import/heartpump_animation.png-26173ac4f3e239fee1bc5f9d60f3e86c.stex" ]
+source_file="res://Assets/sprites/new_human_with_heartpump.png"
+dest_files=[ "res://.import/new_human_with_heartpump.png-49de93704d35369adc8f0eeafad97f64.stex" ]
 
 [params]
 
