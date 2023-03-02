@@ -53,5 +53,4 @@ func check_unlock():
 		unlockable[1] = true
 	if save.resources[RESOURCETYPE.MECHANICAL_ENERGY]:
 		unlockable[2] = true
-		unlockable[3] = true
 	save.techTreeUnlockable = unlockable
