@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Make a friend"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/cut_scenes/intro.tscn"
 boot_splash/show_image=false
 config/icon="res://Assets/art/gameicon.png"
 config/windows_native_icon="res://assets/art/gameicon-export.ico"
@@ -52,6 +52,8 @@ window/stretch/aspect="keep"
 [global]
 
 input=false
+window=false
+boot=false
 
 [input]
 

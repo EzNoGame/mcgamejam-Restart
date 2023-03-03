@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://UI/ConstructUI.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/MachineButton.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Assets/sprites/ResourceIcons/hydrocarbon_icon.png" type="Texture" id=7]
 [ext_resource path="res://Assets/sprites/ResourceIcons/human_icon.png" type="Texture" id=8]
 [ext_resource path="res://Assets/sprites/ResourceIcons/electricity_icon.png" type="Texture" id=9]
+[ext_resource path="res://Assets/sprites/ResourceIcons/heartpump_icon.png" type="Texture" id=10]
+[ext_resource path="res://Assets/sprites/ResourceIcons/organ_icon.png" type="Texture" id=11]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -69,7 +71,7 @@ margin_top = 36.0
 margin_right = 68.0
 margin_bottom = 67.0
 disabled = true
-texture_normal = ExtResource( 5 )
+texture_normal = ExtResource( 6 )
 texture_disabled = SubResource( 1 )
 id = 4
 
@@ -79,7 +81,7 @@ margin_top = 36.0
 margin_right = 104.0
 margin_bottom = 67.0
 disabled = true
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 5 )
 texture_disabled = SubResource( 1 )
 id = 5
 
@@ -98,7 +100,7 @@ margin_top = 71.0
 margin_right = 68.0
 margin_bottom = 102.0
 disabled = true
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 11 )
 texture_disabled = SubResource( 1 )
 id = 7
 
@@ -108,6 +110,15 @@ margin_top = 71.0
 margin_right = 104.0
 margin_bottom = 102.0
 disabled = true
-texture_normal = ExtResource( 5 )
+texture_normal = ExtResource( 10 )
 texture_disabled = SubResource( 1 )
 id = 8
+
+[node name="Button10" parent="GridContainer" instance=ExtResource( 2 )]
+margin_top = 106.0
+margin_right = 32.0
+margin_bottom = 137.0
+disabled = true
+texture_normal = ExtResource( 8 )
+texture_disabled = SubResource( 1 )
+id = 9

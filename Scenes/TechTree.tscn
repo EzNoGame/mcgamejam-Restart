@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/sprites/ResourceIcons/Blood_Icon.png" type="Texture" id=1]
 [ext_resource path="res://Assets/sprites/ResourceIcons/electricity_icon.png" type="Texture" id=2]
@@ -8,9 +8,11 @@
 [ext_resource path="res://Assets/sprites/ResourceIcons/hydrocarbon_icon.png" type="Texture" id=6]
 [ext_resource path="res://Assets/sprites/ResourceIcons/stemcell_icon.png" type="Texture" id=7]
 [ext_resource path="res://Assets/sprites/ResourceIcons/tissue_icon.png" type="Texture" id=8]
+[ext_resource path="res://Assets/sprites/ResourceIcons/heartpump_icon.png" type="Texture" id=9]
 [ext_resource path="res://Assets/sprites/ResourceIcons/human_icon.png" type="Texture" id=10]
 [ext_resource path="res://Assets/sprites/ResourceIcons/Metal_.png" type="Texture" id=11]
 [ext_resource path="res://Assets/sprites/ResourceIcons/Question_Mark.png" type="Texture" id=12]
+[ext_resource path="res://Assets/sprites/ResourceIcons/organ_icon.png" type="Texture" id=13]
 
 [node name="TechTree" type="CanvasLayer"]
 script = ExtResource( 5 )
@@ -239,12 +241,12 @@ margin_right = 100.0
 margin_bottom = -49.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
 disabled = true
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 9 )
 texture_disabled = ExtResource( 12 )
 expand = true
 script = ExtResource( 4 )
-tooltip_desc = "Tissue Box (Tissue)
-Requires: Stem Cells"
+tooltip_desc = "Heart Pump
+"
 
 [node name="B" type="TextureRect" parent="MarginContainer/HBoxContainer/Tier 8"]
 margin_top = 447.0
@@ -258,12 +260,12 @@ margin_right = 100.0
 margin_bottom = -49.0
 hint_tooltip = "To unlock this tech, complete the previous techs."
 disabled = true
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 13 )
 texture_disabled = ExtResource( 12 )
 expand = true
 script = ExtResource( 4 )
-tooltip_desc = "Blood Stone (Blood)
-Requires: Carbon, Water"
+tooltip_desc = "Organ
+"
 
 [node name="Tier 7" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 margin_left = 840.0
