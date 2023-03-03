@@ -26,6 +26,8 @@ func _ready():
 
 func unlock(node):
 	var id = int(node.name)
+	if unlocked[id]:
+		return
 	if unlockable[id]:
 		unlocked[id] = true
 		save.techTreeUnlocked = unlocked
